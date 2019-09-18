@@ -1,0 +1,149 @@
+{% set currentPage = __SELF__.currentPage %}
+
+<div class="band" style="background-image: url('{{ 'assets/images/band-bg.jpg'|theme }}')">
+    <div class="container">
+        <div class="band__title h1">{{ currentPage.name }}</div>
+        <ul class="breadcrumbs">
+            <li>
+                <a href="{{ 'home'|page }}">Главная</a>
+                <i>/</i>
+            </li>
+            <li>
+                <a href="{{ 'page/main'|page }}">Информационный раздел</a>
+                <i>/</i>
+            </li>
+            <li>
+                <a href="{{ 'blog/list'|page }}">Статьи</a>
+                <i>/</i>
+            </li>
+            <li>
+                <span>{{ currentPage.name }}</span>
+            </li>
+        </ul>
+        <a class="band__link h1" href="{{ 'blog/list'|page }}">
+            <svg class="arrow-back">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                     xlink:href="{{ 'assets/images/svg-symbols.svg#arrow-back'|theme }}"></use>
+            </svg>
+            {{ currentPage.name }}
+        </a>
+        {% partial 'site/_header_search_form' %}
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="content-public">
+        <div class="content-public__item">
+            <svg class="calendar">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{'assets/images/svg-symbols.svg#calendar'|theme}}"></use>
+            </svg>
+            <span>Дата публикации:</span>
+            <b>{{ currentPage.created_at|date('d F Y') }}</b>
+        </div>
+        <div class="content-public__item">
+            {% if currentPage.read_time %}
+                <svg class="history-clock-button">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:href="{{ 'assets/images/svg-symbols.svg#history-clock-button'|theme }}"></use>
+                </svg>
+
+                <span>Время чтения:</span>
+                <b>{{ currentPage.read_time }}{{ plural(currentPage.read_time,['минут','минуты','минуты']) }}</b>
+            {% endif %}
+        </div>
+
+
+        <div class="content-public__share">
+            <ul>
+                <li>
+                    <a href="http://vk.com/share.php?title=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url={{ post_url(currentPage) }}" target="_blank">
+                        <svg class="vk">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="{{ 'assets/images/svg-symbols.svg#vk'|theme }}"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://facebook.com/sharer/sharer.php?u={{ post_url(currentPage) }}" target="_blank">
+                        <svg class="fb">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="{{ 'assets/images/svg-symbols.svg#fb'|theme }}"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/share?url={{ post_url(currentPage) }}" target="_blank">
+                        <svg class="gp">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="{{ 'assets/images/svg-symbols.svg#gp'|theme }}"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url={{ post_url(currentPage) }}" target="_blank">
+                        <svg class="tw">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="{{ 'assets/images/svg-symbols.svg#tw'|theme }}"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <span>Поделиться</span>
+            <svg class="share">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                     xlink:href="{{ 'assets/images/svg-symbols.svg#share'|theme }}"></use>
+            </svg>
+            {#<b>10</b>#}
+        </div>
+    </div>
+    <div class="content">
+        {{ currentPage.content|raw }}
+    </div>
+
+
+    <div class="content-rating">
+        Оцените материал:
+        <form data-request="onRatePost" data-request-flash class="{%  if contentTools.isRated(currentPage) %}rated{% endif %}">
+            <span></span>
+
+            <span style="width: {% if currentPage.rating %}{{ (100/5)*currentPage.rating }}{% else %}0{% endif %}%"></span>
+            <input name="rating" type="hidden" >
+            <input type="hidden" name="id" value="{{ currentPage.id }}">
+        </form>
+    </div>
+    <div class="flex-row margin-def">
+        {% for page in contentTools.otherPosts(currentPage.id) %}
+            <div class="col-mb-12 col-xs-6 col-sm-4">
+                <div class="articles-item">
+                    <div class="articles-item__date">{{ page.created_at|date('d') }}<span>{{ page.created_at|date('F')|slice(0, 3) }}</span></div>
+                    <div class="articles-item__img-wrap">
+
+                        <a href="{{ post_url(page) }}">
+                            <img class="articles-item__img" src="{{ page.images.0.path|media|resize(370, 200) }}" alt="">
+                        </a>
+
+                    </div>
+                    <div class="articles-item__info">
+                        <ul class="articles-item__tags">
+                            {% for tag in page.tags %}
+                            <li>
+                                <a href="{{ 'blog/list'|page }}?tag={{ tag.name }}">{{ tag.name }}</a>
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                        <h4 class="title-line">{{ page.name }}</h4>
+                        <p>{{ page.content|striptags|length > 150 ? page.content|striptags|slice(0, 150) ~ '...' : page.content|striptags  }}</p>
+                        <a class="red-arrow-btn" href="{{ 'blog/single'|page({slug:page.slug}) }}">
+                            Подробнее
+                            <svg class="arrow">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{'assets/images/svg-symbols.svg#arrow'|theme}}"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

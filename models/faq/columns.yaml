@@ -1,0 +1,7 @@
+columns:
+    id:
+        label: ID
+        type: number
+    question:
+        label: Вопрос
+        type: text

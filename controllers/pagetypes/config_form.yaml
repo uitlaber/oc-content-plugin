@@ -1,0 +1,10 @@
+name: 'Тип контента'
+modelClass: Uit\Content\Models\PageType
+form: $/uit/content/models/pagetype/fields.yaml
+defaultRedirect: uit/content/pagetypes
+create:
+    redirect: 'uit/content/pagetypes/update/:id'
+    redirectClose: uit/content/pagetypes
+update:
+    redirect: uit/content/pagetypes
+    redirectClose: uit/content/pagetypes

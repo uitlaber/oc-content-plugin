@@ -1,0 +1,11 @@
+name: Старница
+modelClass: Uit\Content\Models\Page
+form: $/uit/content/models/page/fields.yaml
+defaultRedirect: uit/content/pages
+create:
+    redirect: 'uit/content/pages/update/:id'
+    redirectClose: uit/content/pages
+update:
+    redirect: uit/content/pages
+    redirectClose: uit/content/pages
+preview: {  }

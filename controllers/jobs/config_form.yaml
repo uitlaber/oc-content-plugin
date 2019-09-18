@@ -1,0 +1,11 @@
+name: Вакансия
+modelClass: Uit\Content\Models\Job
+form: $/uit/content/models/job/fields.yaml
+defaultRedirect: uit/content/jobs
+create:
+    redirect: 'uit/content/jobs/update/:id'
+    redirectClose: uit/content/jobs
+update:
+    redirect: uit/content/jobs
+    redirectClose: uit/content/jobs
+preview: {  }

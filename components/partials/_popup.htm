@@ -1,0 +1,23 @@
+<div id="{{ popup_id }}" class="mfp-hide popup-form default-form popup-form-animate">
+    <img src="{{ 'assets/images/logo_black.svg'|theme }}" alt="Логотип">
+    <div style="text-align: center; font-size: 18px;">{{ popup_content }}</div>
+</div>
+
+<script>
+    $.magnificPopup.close();
+    $('form[data-request="onRespondJob"]')[0].reset();
+    setTimeout(function() {
+        $.magnificPopup.open({
+            items: {
+                src: '#{{ popup_id }}',
+                type: 'inline',
+
+            },
+            midClick: true,
+            fixedBgPos: true,
+            fixedContentPos: true,
+            removalDelay: 400,
+            mainClass: 'popup-form-animate'
+        });
+    }, 1000);
+</script>

@@ -1,0 +1,11 @@
+name: Подписка
+modelClass: Uit\Content\Models\Subscribe
+form: $/uit/content/models/subscribe/fields.yaml
+defaultRedirect: uit/content/subscribes
+create:
+    redirect: 'uit/content/subscribes/update/:id'
+    redirectClose: uit/content/subscribes
+update:
+    redirect: uit/content/subscribes
+    redirectClose: uit/content/subscribes
+preview: {  }

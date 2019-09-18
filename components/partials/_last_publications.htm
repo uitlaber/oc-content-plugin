@@ -1,0 +1,19 @@
+<div class="publication-block_mobile">
+    <h4 class="title-line">Последние публикации</h4>
+
+    {% for page in contentTools.getLastPublications(3) %}
+    <div class="publication-last" >
+        <a href="{{ 'page/single'|page({type: page.type.slug,slug:page.slug}) }}">
+        <img src="{{ page.images.0.path|media|resize(60,60,{mode:'crop'}) }}" alt="{{ page.name }}">
+        </a>
+        <div>
+            <a href="{{ 'page/single'|page({type: page.type.slug,slug:page.slug}) }}">
+            <h4>{{ page.name }}</h4>
+            </a>
+            <span>{{ page.created_at|date('d F, Y') }}</span>
+            <a class="line-link" href="{{ 'page/list'|page({type:page.type.slug}) }}" >{{ page.type.name }}</a>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>

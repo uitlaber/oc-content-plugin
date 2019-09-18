@@ -1,0 +1,30 @@
+tabs:
+    fields:
+        name:
+            label: Название
+            span: auto
+            type: text
+            tab: Основное
+        slug:
+            label: URL
+            span: auto
+            type: text
+            tab: Основное
+        content:
+            label: Описание
+            size: large
+            span: full
+            type: textarea
+            tab: Основное
+        params:
+            label: Параметры
+            size: huge
+            language: javascript
+            span: full
+            type: codeeditor
+            tab: Основное
+        has_page:
+            label: 'Страница со списком'
+            span: auto
+            type: switch
+            tab: Основное

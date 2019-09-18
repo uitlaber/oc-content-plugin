@@ -1,0 +1,10 @@
+columns:
+    id:
+        label: ID
+        type: number
+    name:
+        label: Название
+        type: text
+    end_date:
+        label: 'Срок окончания'
+        type: datetime

@@ -1,0 +1,17 @@
+fields:
+    name:
+        label: Название
+        span: auto
+        type: text
+    slug:
+        label: Алияс
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    content:
+        label: Описание
+        span: full
+        size: large
+        type: textarea

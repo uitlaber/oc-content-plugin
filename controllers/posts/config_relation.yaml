@@ -1,0 +1,10 @@
+products:
+  label: товар
+  view:
+    list: $/uit/lazyshop/models/product/columns.yaml
+    toolbarButtons: add|remove
+    showSearch: true
+  manage:
+    showSearch: true
+    form: $/uit/lazyshop/models/product/fields.yaml
+    recordsPerPage: 10

@@ -1,0 +1,11 @@
+name: Вопрос
+modelClass: Uit\Content\Models\Faq
+form: $/uit/content/models/faq/fields.yaml
+defaultRedirect: uit/content/faqs
+create:
+    redirect: 'uit/content/faqs/update/:id'
+    redirectClose: uit/content/faqs
+update:
+    redirect: uit/content/faqs
+    redirectClose: uit/content/faqs
+preview: {  }

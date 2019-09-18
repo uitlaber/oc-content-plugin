@@ -1,0 +1,11 @@
+name: Видео
+modelClass: Uit\Content\Models\Video
+form: $/uit/content/models/video/fields.yaml
+defaultRedirect: uit/content/videos
+create:
+    redirect: 'uit/content/videos/update/:id'
+    redirectClose: uit/content/videos
+update:
+    redirect: uit/content/videos
+    redirectClose: uit/content/videos
+preview: {  }

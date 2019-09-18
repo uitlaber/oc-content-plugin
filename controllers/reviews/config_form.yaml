@@ -1,0 +1,11 @@
+name: Отзыв
+modelClass: Uit\Content\Models\Review
+form: $/uit/content/models/review/fields.yaml
+defaultRedirect: uit/content/reviews
+create:
+    redirect: 'uit/content/reviews/update/:id'
+    redirectClose: uit/content/reviews
+update:
+    redirect: uit/content/reviews
+    redirectClose: uit/content/reviews
+preview: {  }

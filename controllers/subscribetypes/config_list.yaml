@@ -1,0 +1,12 @@
+title: 'Виды подписок'
+modelClass: Uit\Content\Models\SubscribeType
+list: $/uit/content/models/subscribetype/columns.yaml
+recordUrl: 'uit/content/subscribetypes/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

@@ -1,0 +1,10 @@
+name: Steps
+form: $/uit/content/models/step/fields.yaml
+modelClass: Uit\Content\Models\Step
+defaultRedirect: uit/content/steps
+create:
+    redirect: 'uit/content/steps/update/:id'
+    redirectClose: uit/content/steps
+update:
+    redirect: uit/content/steps
+    redirectClose: uit/content/steps

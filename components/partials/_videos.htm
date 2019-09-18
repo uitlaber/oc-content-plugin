@@ -1,0 +1,28 @@
+{% for video in videos %}
+<div class="col-mb-12 col-xs-6">
+    <div class="article-item">
+        <a class="articles-item__video js-open-video" href="{{ video.video_url }}">
+            <img class="articles-item__img" src="{{ video.images.0.path|media|resize(370,198) }}" alt="{{ video.name }}">
+            <svg class="play">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{'assets/images/svg-symbols.svg#play'|theme}}"></use>
+            </svg>
+        </a>
+        <div class="articles-item__info">
+            <ul class="articles-item__tags">
+                {% for tag in video.tags %}
+                    <li>
+                        <a href="{{ 'video/list'|page }}?tag={{ tag.name }}">{{ tag.name }}</a>
+                    </li>
+                {% endfor %}
+
+            </ul>
+            <h4>{{ video.name }}</h4>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="col-xs-12">
+    <p>Нет данных</p>
+</div>
+
+{% endfor %}

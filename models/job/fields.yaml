@@ -1,0 +1,18 @@
+fields:
+    published:
+        label: Активна
+        span: full
+        type: switch
+    name:
+        label: Должность
+        span: auto
+        type: text
+    salary:
+        label: Зарплата
+        span: auto
+        type: text
+    content:
+        label: Описание
+        size: huge
+        span: full
+        type: richeditor

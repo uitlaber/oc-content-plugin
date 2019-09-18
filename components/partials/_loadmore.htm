@@ -1,0 +1,24 @@
+<script>
+    var currentPage = {{ results.currentPage }};
+    var lastPage = {{ results.lastPage }};
+</script>
+
+<div class="publication-nav">
+    <a class="white-border-btn" href="{{ 'page/main'|page }}">ДРУГАЯ ИНФОРМАЦИЯ</a>
+
+    {% if results.lastPage > 1 %}
+        {% if results.currentPage < results.lastPage %}
+            <a class="red-border-btn" href="" data-request="onLoadMore" data-request-data="currentPage:currentPage"
+               data-request-success="loadMore(data)">СМОТРЕТЬ ЕЩЕ ...</a>
+        {% endif %}
+    {% endif %}
+</div>
+
+<script>
+    function loadMore(data) {
+        $('{{ wrapper }}').before(data.results);
+        let url = location.protocol + '//' + location.host + location.pathname;
+        window.history.pushState({}, "", url + '?page=' + data.currentPage {% if keyword %} +'&keyword={{keyword}}' {% endif %}{% if tag %} +'&tag={{tag}}' {% endif %});
+        //window.history.pushState({},"", data.url);
+    }
+</script>

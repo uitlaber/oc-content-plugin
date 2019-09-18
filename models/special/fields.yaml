@@ -1,0 +1,33 @@
+tabs:
+    fields:
+        name:
+            label: Название
+            span: auto
+            type: text
+            tab: Основное
+        slug:
+            label: URL
+            span: auto
+            preset:
+                field: name
+                type: slug
+            type: text
+            tab: Основное
+        content:
+            label: Описание
+            size: huge
+            span: full
+            type: richeditor
+            tab: Основное
+        end_date:
+            label: 'Срок окончания'
+            mode: datetime
+            span: auto
+            type: datepicker
+            tab: Основное
+        image:
+            label: Изображение
+            mode: file
+            span: left
+            type: mediafinder
+            tab: Основное

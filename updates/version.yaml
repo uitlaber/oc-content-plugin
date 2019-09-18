@@ -1,0 +1,152 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table uit_content_pages'
+    - builder_table_create_uit_content_pages.php
+1.0.3:
+    - 'Updated table uit_content_pages'
+    - builder_table_update_uit_content_pages.php
+1.0.4:
+    - 'Created table uit_content_reviews'
+    - builder_table_create_uit_content_reviews.php
+1.0.5:
+    - 'Updated table uit_content_reviews'
+    - builder_table_update_uit_content_reviews.php
+1.0.6:
+    - 'Updated table uit_content_reviews'
+    - builder_table_update_uit_content_reviews_2.php
+1.0.7:
+    - 'Created table uit_content_faqs'
+    - builder_table_create_uit_content_faqs.php
+1.0.8:
+    - 'Updated table uit_content_reviews'
+    - builder_table_update_uit_content_reviews_3.php
+1.0.9:
+    - 'Created table uit_content_cases'
+    - builder_table_create_uit_content_cases.php
+1.0.10:
+    - 'Updated table uit_content_faqs'
+    - builder_table_update_uit_content_faqs.php
+1.0.11:
+    - 'Updated table uit_content_cases'
+    - builder_table_update_uit_content_cases.php
+1.0.12:
+    - 'Created table uit_content_posts'
+    - builder_table_create_uit_content_posts.php
+1.0.13:
+    - 'Created table uit_content_specials'
+    - builder_table_create_uit_content_specials.php
+1.0.14:
+    - 'Updated table uit_content_specials'
+    - builder_table_update_uit_content_specials.php
+1.0.15:
+    - 'Created table uit_content_videos'
+    - builder_table_create_uit_content_videos.php
+1.0.16:
+    - 'Drop table uit_content_cases'
+    - builder_table_delete_uit_content_cases.php
+1.0.17:
+    - 'Updated table uit_content_pages'
+    - builder_table_update_uit_content_pages_2.php
+1.0.18:
+    - 'Updated table uit_content_pages'
+    - builder_table_update_uit_content_pages_3.php
+1.0.19:
+    - 'Updated table uit_content_videos'
+    - builder_table_update_uit_content_videos.php
+1.0.20:
+    - 'Created table uit_content_tags'
+    - builder_table_create_uit_content_tags.php
+1.0.21:
+    - 'Created table uit_content_taggables'
+    - builder_table_create_uit_content_taggables.php
+1.0.22:
+    - 'Updated table uit_content_posts'
+    - builder_table_update_uit_content_posts.php
+1.0.23:
+    - 'Updated table uit_content_videos'
+    - builder_table_update_uit_content_videos_2.php
+1.0.24:
+    - 'Updated table uit_content_videos'
+    - builder_table_update_uit_content_videos_3.php
+1.0.25:
+    - 'Updated table uit_content_faqs'
+    - builder_table_update_uit_content_faqs_2.php
+1.0.26:
+    - 'Updated table uit_content_pages'
+    - builder_table_update_uit_content_pages_4.php
+1.0.27:
+    - 'Updated table uit_content_posts'
+    - builder_table_update_uit_content_posts_2.php
+1.0.28:
+    - 'Created table uit_content_brands'
+    - builder_table_create_uit_content_brands.php
+1.0.29:
+    - 'Drop table uit_content_brands'
+    - builder_table_delete_uit_content_brands.php
+1.0.30:
+    - 'Created table uit_content_types'
+    - builder_table_create_uit_content_types.php
+1.0.31:
+    - 'Updated table uit_content_pages'
+    - builder_table_update_uit_content_pages_5.php
+1.0.32:
+    - 'Updated table uit_content_types'
+    - builder_table_update_uit_content_types.php
+1.0.33:
+    - 'Created table uit_content_post_products'
+    - builder_table_create_uit_content_post_products.php
+1.0.34:
+    - 'Created table uit_content_page_products'
+    - builder_table_create_uit_content_page_products.php
+1.0.35:
+    - 'Updated table uit_content_faqs'
+    - builder_table_update_uit_content_faqs_3.php
+1.0.36:
+    - 'Updated table uit_content_faqs'
+    - builder_table_update_uit_content_faqs_4.php
+1.0.37:
+    - 'Created table uit_content_subscribes'
+    - builder_table_create_uit_content_subscribes.php
+1.0.38:
+    - 'Updated table uit_content_subscribes'
+    - builder_table_update_uit_content_subscribes.php
+1.0.39:
+    - 'Created table uit_content_subscribe_types'
+    - builder_table_create_uit_content_subscribe_types.php
+1.0.40:
+    - 'Created table uit_content_subscribes_types'
+    - builder_table_create_uit_content_subscribes_types.php
+1.0.41:
+    - 'Updated table uit_content_subscribes'
+    - builder_table_update_uit_content_subscribes_2.php
+1.0.42:
+    - 'Created table uit_content_ratings'
+    - builder_table_create_uit_content_ratings.php
+1.0.43:
+    - 'Updated table uit_content_ratings'
+    - builder_table_update_uit_content_ratings.php
+1.0.44:
+    - 'Updated table uit_content_ratings'
+    - builder_table_update_uit_content_ratings_2.php
+1.0.45:
+    - 'Updated table uit_content_ratings'
+    - builder_table_update_uit_content_ratingables.php
+1.0.46:
+    - 'Updated table uit_content_ratingables'
+    - builder_table_update_uit_content_ratings_3.php
+1.0.47:
+    - 'Updated table uit_content_pages'
+    - builder_table_update_uit_content_pages_6.php
+1.0.48:
+    - 'Updated table uit_content_posts'
+    - builder_table_update_uit_content_posts_3.php
+1.0.49:
+    - 'Created table uit_content_jobs'
+    - builder_table_create_uit_content_jobs.php
+1.0.50:
+    - 'Updated table uit_content_jobs'
+    - builder_table_update_uit_content_jobs.php
+1.0.51:
+    - 'Created table uit_content_steps'
+    - builder_table_create_uit_content_steps.php

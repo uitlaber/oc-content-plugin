@@ -1,0 +1,11 @@
+name: Статья
+modelClass: Uit\Content\Models\Post
+form: $/uit/content/models/post/fields.yaml
+defaultRedirect: uit/content/posts
+create:
+    redirect: 'uit/content/posts/update/:id'
+    redirectClose: uit/content/posts
+update:
+    redirect: uit/content/posts
+    redirectClose: uit/content/posts
+preview: {  }

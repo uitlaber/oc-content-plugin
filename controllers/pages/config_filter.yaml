@@ -1,0 +1,6 @@
+scopes:
+    type:
+        label: Тип страницы
+        modelClass: Uit\Content\Models\PageType
+        conditions: type_id in (:filtered)
+        nameFrom: name

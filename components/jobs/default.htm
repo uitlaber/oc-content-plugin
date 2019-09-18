@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="flex-row">
+        <div class="col-mb-12 col-sm-6">
+            {% for job in __SELF__.jobs %}
+            <div class="job">
+                <div class="job__title">
+                    <img src="{{ 'assets/images/user.png'|theme }}" alt="Вакансия">
+                    <div>
+                        <h4>{{ job.name }}</h4>
+                        <p>{{ job.salary }}</p>
+                    </div>
+                </div>
+                <div class="job__info">
+                    {{ job.content|raw }}
+                    <a class="red-arrow-btn js-open-popup"  href="#job">
+                        Откликнуться
+                        <svg class="arrow">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ 'assets/images/svg-symbols.svg#arrow'|theme }}"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="col-mb-12 col-sm-6">
+            <div id="job" class="job-form default-form">
+                <h4 class="title-line animate">Оставить заявку</h4>
+                <form  data-request="onRespondJob" data-request-files data-request-flash >
+                    <div class="flex-row">
+                        <div class="col-mb-12 col-xs-6 col-sm-12 col-md-6">
+                            <label>
+                                <input type="text" name="name" placeholder="Ваше имя*" required>
+                                <span class="red-block red-block_left">
+                                    <svg class="user">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{'assets/images/svg-symbols.svg#user'|theme}}"></use>
+                                    </svg>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-mb-12 col-xs-6 col-sm-12 col-md-6">
+                            <label>
+                                <input type="text" name="jobname" placeholder="Желаемая должность" required>
+                                <span class="red-block red-block_left">
+                                    <svg class="user">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{'assets/images/svg-symbols.svg#user'|theme}}"></use>
+                                    </svg>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-mb-12 col-xs-6 col-sm-12 col-md-6">
+                            <label>
+                                <input type="text" name="phone" placeholder="Ваш телефон*" required>
+                                <span class="red-block red-block_left">
+                                    <svg class="phone">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{'assets/images/svg-symbols.svg#phone'|theme}}"></use>
+                                    </svg>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-mb-12 col-xs-6 col-sm-12 col-md-6">
+                            <label>
+                                <input type="email" name="email" placeholder="E-mail">
+                                <span class="red-block red-block_left">
+                                    <svg class="at-sign">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{'assets/images/svg-symbols.svg#at-sign'|theme}}"></use>
+                                    </svg>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-mb-12">
+                            <label class="default-form__text">
+                                <textarea name="comment" placeholder="Комментарий"></textarea>
+                                <span class="red-block red-block_left">
+                                    <svg class="edit">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{'assets/images/svg-symbols.svg#edit'|theme}}"></use>
+                                    </svg>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-mb-12 col-xs-6 col-sm-12 col-md-7">
+                            <label class="default-form__file">
+                                <input type="file" name="resume">
+                                <span class="line-link">Прикрепить резюме</span>
+                            </label>
+                            <label class="default-form__policy js-policy">
+                                <input type="checkbox" checked> <i></i>
+                                <span>Я принимаю <a class="line-link" href="{{ page_url(109) }}" target="_blank">условия</a> о персональных данных</span>
+                            </label>
+                        </div>
+                        <div class="col-mb-12 col-xs-6 col-sm-12 col-md-5">
+                            <input type="hidden" name="form" value="5">
+                            <button class="red-btn" type="submit">Оставить заявку</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

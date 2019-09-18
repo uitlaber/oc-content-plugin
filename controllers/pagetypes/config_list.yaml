@@ -1,0 +1,12 @@
+title: 'Тип контента'
+modelClass: Uit\Content\Models\PageType
+list: $/uit/content/models/pagetype/columns.yaml
+recordUrl: 'uit/content/pagetypes/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

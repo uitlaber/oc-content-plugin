@@ -1,0 +1,50 @@
+tabs:
+    fields:
+        published:
+            label: Активность
+            span: auto
+            type: switch
+            tab: Основное
+        name:
+            label: Название
+            span: left
+            type: text
+            tab: Основное
+        content:
+            label: Описание
+            size: large
+            span: left
+            type: richeditor
+            tab: Основное
+        video_url:
+            label: 'Ссылка на видео'
+            span: left
+            type: text
+            tab: Основное
+        tags:
+            label: Теги
+            nameFrom: name
+            descriptionFrom: id
+            span: auto
+            type: taglist
+            mode: relation
+            tab: Основное
+        images:
+            label: Картинки
+            prompt: Добавить
+            span: auto
+            type: repeater
+            tab: Основное
+            form:
+                fields:
+                    path:
+                        label: Картинка
+                        mode: image
+                        imageWidth: '100'
+                        imageHeight: '100'
+                        span: auto
+                        type: mediafinder
+                    alt:
+                        label: Название
+                        span: auto
+                        type: text

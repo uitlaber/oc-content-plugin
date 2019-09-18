@@ -1,0 +1,11 @@
+name: 'Вид подписки'
+modelClass: Uit\Content\Models\SubscribeType
+form: $/uit/content/models/subscribetype/fields.yaml
+defaultRedirect: uit/content/subscribetypes
+create:
+    redirect: 'uit/content/subscribetypes/update/:id'
+    redirectClose: uit/content/subscribetypes
+update:
+    redirect: uit/content/subscribetypes
+    redirectClose: uit/content/subscribetypes
+preview: {  }

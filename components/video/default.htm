@@ -1,0 +1,36 @@
+<div class="flex-row">
+
+    {% partial '@_videos' videos=__SELF__.videos %}
+    <div id="videos"></div>
+    <div class="col-mb-12" id="pagination">
+        {% partial '@_loadmore' results=__SELF__.videos wrapper='#videos' %}
+    </div>
+</div>
+<div class="publication">
+    <div class="publication-block publication-block_mobile">
+        <form class="publication-form" method="GET">
+            <input type="search" name="keyword" placeholder="Поиск">
+            <button class="red-border-btn" type="submit">
+                <svg class="at-sign">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{'assets/images/svg-symbols.svg#search'|theme}}"></use>
+                </svg>
+            </button>
+        </form>
+    </div>
+    {% if __SELF__.tags %}
+    <div class="publication-block">
+        <h4 class="title-line">Облако тегов</h4>
+        <ul class="publication-tags">
+            {% for tag in __SELF__.tags %}
+            <li>
+                <a href="{{ 'video/list'|page }}?tag={{ tag.name }}">{{ tag.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    {% partial '@_subscribtion_form' %}
+    {% partial '@_last_publications' %}
+
+
+</div>

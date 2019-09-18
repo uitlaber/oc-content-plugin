@@ -1,0 +1,21 @@
+fields:
+    name:
+        label: Заголовок
+        span: auto
+        type: text
+    content:
+        label: Текст
+        size: huge
+        span: left
+        type: richeditor
+    image:
+        label: Картинка
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

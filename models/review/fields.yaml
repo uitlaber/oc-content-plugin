@@ -1,0 +1,28 @@
+fields:
+    published:
+        label: Активность
+        span: full
+        type: switch
+    username:
+        label: Имя
+        span: auto
+        type: text
+    company:
+        label: 'Название фирмы или должность'
+        span: auto
+        type: text
+    rating:
+        label: Оценка
+        options:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+            5: '5'
+        span: auto
+        type: dropdown
+    content:
+        label: 'Тест отзыва'
+        size: huge
+        span: left
+        type: textarea

@@ -1,0 +1,10 @@
+name: Спецпредложения
+modelClass: Uit\Content\Models\Special
+form: $/uit/content/models/special/fields.yaml
+defaultRedirect: uit/content/specials
+create:
+    redirect: 'uit/content/specials/update/:id'
+    redirectClose: uit/content/specials
+update:
+    redirect: uit/content/specials
+    redirectClose: uit/content/specials

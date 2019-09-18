@@ -1,0 +1,61 @@
+plugin:
+    name: 'uit.content::lang.plugin.name'
+    description: 'uit.content::lang.plugin.description'
+    author: Uit
+    icon: oc-icon-bookmark
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Контент
+        url: uit/content/pages
+        icon: icon-list
+        sideMenu:
+            side-menu-item:
+                label: Страницы
+                url: uit/content/pages
+                icon: icon-pencil
+            side-menu-item3:
+                label: Статьи
+                url: uit/content/posts
+                icon: icon-bookmark
+            side-menu-item4:
+                label: Спецпредл.
+                url: uit/content/specials
+                icon: icon-fire
+            side-menu-item5:
+                label: Видео
+                url: uit/content/videos
+                icon: icon-video-camera
+            side-menu-item2:
+                label: 'Тип страницы'
+                url: uit/content/pagetypes
+                icon: icon-sitemap
+            side-menu-item6:
+                label: 'Шаги работ'
+                url: uit/content/steps
+                icon: icon-trello
+    # main-menu-item2:
+    #     label: Отзывы
+    #     url: uit/content/reviews
+    #     icon: icon-stack-exchange
+    main-menu-item3:
+        label: Вопросы
+        url: uit/content/faqs
+        icon: icon-question
+    # main-menu-item4:
+    #     label: Подписчики
+    #     url: uit/content/subscribes
+    #     icon: icon-wifi
+    #     sideMenu:
+    #         side-menu-item2:
+    #             label: Подписчики
+    #             url: uit/content/subscribes
+    #             icon: icon-users
+    #         side-menu-item:
+    #             label: 'Виды подписок'
+    #             url: uit/content/subscribetypes
+    #             icon: icon-bookmark
+    # main-menu-item5:
+    #     label: Вакансии
+    #     url: uit/content/jobs
+    #     icon: icon-users

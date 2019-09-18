@@ -1,0 +1,19 @@
+fields:
+    question:
+        label: Вопрос
+        size: small
+        span: left
+        type: textarea
+    question_name:
+        label: 'Автор вопроса'
+        span: auto
+        type: text
+    answer:
+        label: Ответ
+        size: huge
+        span: auto
+        type: richeditor
+    answer_name:
+        label: Отвечает
+        span: right
+        type: text

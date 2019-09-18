@@ -1,0 +1,5 @@
+columns:
+    name:
+        label: Заголовок
+        type: text
+        searchable: true

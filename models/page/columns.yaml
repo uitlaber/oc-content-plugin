@@ -1,0 +1,18 @@
+columns:
+    id:
+        label: ID
+        type: number
+    published:
+        label: Активность
+        type: switch
+    name:
+        label: Название
+        type: text
+    type_name:
+        label: 'Тип контента'
+        type: text
+        select: name
+        relation: type
+    updated_at:
+        label: 'Дата редактирования'
+        type: datetime

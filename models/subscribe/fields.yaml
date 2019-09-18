@@ -1,0 +1,18 @@
+fields:
+    email:
+        label: Email
+        span: auto
+        type: text
+    types:
+        label: 'Виды подписок'
+        nameFrom: name
+        descriptionFrom: content
+        span: auto
+        type: relation
+    user:
+        label: Пользователь
+        span: auto
+        nameFrom: name
+        descriptionFrom: email
+        list: $/rainlab/user/models/user/columns.yaml
+        type: recordfinder

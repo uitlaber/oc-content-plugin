@@ -1,0 +1,29 @@
+{% for page in pages %}
+
+    <div class="expert-item">
+        {% if page.type.slug != 'cases' %}
+        <div class="expert-item__date">{{ page.created_at|date('d') }}<span>{{ page.created_at|date('F')|slice(0, 3) }}</span></div>
+       {% endif %}
+        <div class="expert-item__img">
+            <a href="{{ page_url(page) }}">
+            <img src="{{ page.images.0.path|media|resize(372,210,{mode:'crop'}) }}" alt="">
+            </a>
+        </div>
+        <div class="expert-item__info">
+            <a href="{{ page_url(page) }}"><h4 class="title-line animate">{{ page.name }}</h4></a>
+            <p>{{ text_cut(page.content,300) }}</p>
+            <a class="red-arrow-btn" href="{{ page_url(page) }}">
+                Подробнее
+                <svg class="arrow">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ 'assets/images/svg-symbols.svg#arrow'|theme }}"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+{% else %}
+    <div class="col-xs-12">
+        <p>Нет данных</p>
+    </div>
+
+{% endfor %}

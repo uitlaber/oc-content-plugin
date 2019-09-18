@@ -1,0 +1,8 @@
+columns:
+    id:
+        label: ID
+        type: number
+    email:
+        label: Email
+        type: text
+        searchable: true

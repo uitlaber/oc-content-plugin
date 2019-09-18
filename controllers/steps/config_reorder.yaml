@@ -1,0 +1,4 @@
+title: Steps
+modelClass: Uit\Content\Models\Step
+toolbar:
+    buttons: reorder_toolbar

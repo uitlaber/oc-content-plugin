@@ -1,0 +1,27 @@
+{% for post in posts %}
+<div class="col-mb-12 col-xs-6">
+    <div class="articles-item">
+        <div class="articles-item__date">{{ post.created_at|date('d') }}<span>{{ post.created_at|date('F')|slice(0, 3) }}</span></div>
+        <div class="articles-item__img-wrap">
+            <a href="{{ 'blog/single'|page({slug:post.slug}) }}"><img class="articles-item__img" src="{{ post.images.0.path|media|resize(370,198) }}" alt="{{ post.name }}"></a>
+        </div>
+        <div class="articles-item__info">
+            <ul class="articles-item__tags">
+                {% for tag in post.tags %}
+                    <li>
+                        <a href="{{ 'blog/list'|page }}?tag={{ tag.name }}">{{ tag.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <a href="{{ 'blog/single'|page({slug:post.slug}) }}"> <h4 class="title-line">{{ post.name }}</h4></a>
+            <p>{{ post.content|striptags|length > 150 ? post.content|striptags|slice(0, 150) ~ '...' : post.content|striptags  }}</p>
+            <a class="red-arrow-btn" href="{{ 'blog/single'|page({slug:post.slug}) }}">
+                Подробнее
+                <svg class="arrow">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ 'assets/images/svg-symbols.svg#arrow'|theme }}"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+{% endfor %}
